@@ -4,7 +4,6 @@
 
 source ../lib/utils.sh
 source ../environment.sh
-pwd
 
 
 if not_installed zsh; then
