@@ -29,6 +29,6 @@ install ranger
 
 
 # Install tools
-for src in $(find -H . -maxdepth 2 -name 'install.sh'); do
-  cd $(dirname "$src") && bash $(basename "$src")
+for file in $(find -H . -maxdepth 2 -name 'install.sh'); do
+  cd $(dirname "$file") && bash $(basename "$file")
 done
