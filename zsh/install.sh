@@ -8,10 +8,11 @@ source ../environment.sh
 
 # Ensure Zsh is installed
 if not_installed zsh; then
+  banner "Zsh"
   install zsh
   sudo chsh -s /usr/bin/zsh "$_USER"
 else
-  echo "zsh already installed. skipping..."
+  echo "Zsh already installed. skipping..."
 fi
 
 
