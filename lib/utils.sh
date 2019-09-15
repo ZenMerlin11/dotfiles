@@ -17,14 +17,8 @@ upgrade_packages() {
 
 install() {
   program_name="$1"
-
-  if not_installed "$program_name"; then
-    banner "$program_name"
-    echo "Installing ${program_name}..."
-    apt install -y "${program_name}"
-  else
-    echo "${program_name} already installed. skipping..."
-  fi
+  echo "Installing ${program_name}..."
+  apt install -y "${program_name}"
 }
 
 
