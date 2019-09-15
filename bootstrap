@@ -1,0 +1,34 @@
+#!/bin/bash
+# Bootstrap script for Ubuntu 19.04 Development Environment
+
+source lib/utils.sh
+source environment.sh
+
+
+# Update package index and apply available package upgrades
+#upgrade_packages
+
+
+# Ensure figlet installed for printing banners
+install figlet
+
+
+# Banner
+banner "Zen Box"
+
+
+# Install misc utilities
+install zip
+install nmap
+install cowsay
+install lolcat
+install jq
+install jo
+install dialog
+install ranger
+
+
+# Install tools
+for src in $(find -H . -maxdepth 2 -name 'install.sh'); do
+  cd $(dirname "$src") && bash $(basename "$src")
+done
