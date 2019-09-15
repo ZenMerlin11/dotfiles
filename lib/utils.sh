@@ -108,3 +108,17 @@ link_file() {
   echo "Linking file: ${dest}"
   ln -s "$src" "$dest"
 }
+
+link_files() {
+  src_dir="$1"
+  dest_dir="$2"
+
+  files=$(find -H "$src_dir" -maxdepth 1 -name '*.symlink')
+
+  for file_src in "$files"; do
+    file=$(basename "$file_src")
+    src="${src_dir}/${file}"
+    dest="${dest_dir}/.${file%.*}"
+    link_file "$src" "$dest"
+  done
+}
