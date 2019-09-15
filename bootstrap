@@ -26,9 +26,18 @@ install jq
 install jo
 install dialog
 install ranger
+install curl
+
+
+# Ensure Zsh installed first
+cd zsh && bash install.sh
+cd "$DOTFILES_ROOT"
 
 
 # Install tools
-for file in $(find -H . -maxdepth 2 -name 'install.sh'); do
+
+files="$(find -H . -maxdepth 2 -name 'install.sh' -not -path "./zsh/*")"
+for file in $files; do
   cd $(dirname "$file") && bash $(basename "$file")
+  cd "$DOTFILES_ROOT"
 done
