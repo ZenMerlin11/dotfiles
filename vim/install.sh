@@ -9,10 +9,7 @@ banner "VIM"
 
 
 # Ensure vim is installed
-if not_installed vim; then
-  install vim
-  link_files "$(pwd)" "$_HOME"
-fi
+install vim
 
 
 # Setup 
@@ -28,3 +25,5 @@ if [[ ! -d "${_HOME}/.vim/bundle/Vundle.vim" ]]; then
 else
   echo "Vundle is already installed. Skipping..."
 fi
+
+link_files "$(pwd)" "$_HOME"

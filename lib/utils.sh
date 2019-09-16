@@ -118,7 +118,7 @@ link_files() {
   for file_src in "$files"; do
     file=$(basename "$file_src")
     src="${src_dir}/${file}"
-    dest="${dest_dir}/.${file%.*}"
+    dest="${dest_dir}/${file%.*}"
     link_file "$src" "$dest"
   done
 }
