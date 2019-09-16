@@ -36,7 +36,6 @@ cd "$DOTFILES_ROOT"
 
 
 # Install tools
-
 files="$(find -H . -maxdepth 2 -name 'install.sh' -not -path "./zsh/*")"
 for file in $files; do
   cd $(dirname "$file") && bash $(basename "$file")

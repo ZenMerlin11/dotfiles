@@ -46,5 +46,6 @@ curr_dir=$(pwd)
 cd "$ZSHRC"
 for file in $(find -H .. -maxdepth 2 -name "*rc.zsh"); do
   source "$file"
+  cd "$ZSHRC" # added in case a file sourced changes the working dir
 done
 cd "$curr_dir"

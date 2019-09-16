@@ -10,6 +10,9 @@ TERRAFORM_VERSION="0.12.7"
 TERRAGRUNT_VERSION="0.19.21"
 
 
+banner "Terraform"
+
+
 manual_install() {
   program="$1"
   version="$2"
@@ -20,7 +23,6 @@ manual_install() {
   if is_installed "$program"; then
     echo "Existing binary detected at $(which "$program"). Skipping..."
   else
-    banner "$program"
     if [[ "$program" == "terraform" ]]; then
       install_terraform "$version" "$install_path"
     else

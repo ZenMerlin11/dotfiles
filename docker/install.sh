@@ -6,9 +6,11 @@ source ../lib/utils.sh
 source ../environment.sh
 
 
+banner "Docker"
+
+
 if not_installed docker; then
   # Ensure dependency installed
-  banner "Docker"
 
   # Set up Docker repository
   echo "Installing packages to allow apt to use a repository over HTTPS..."

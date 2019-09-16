@@ -8,9 +8,11 @@ source ../environment.sh
 install_changed="false"
 
 
+banner "Zsh"
+
+
 # Ensure Zsh is installed
 if not_installed zsh; then
-  banner "Zsh"
   install zsh
   sudo chsh -s /usr/bin/zsh "$_USER"
   install_changed="true"

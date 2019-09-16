@@ -6,6 +6,9 @@ source ../lib/utils.sh
 source ../environment.sh
 
 
+banner "Python"
+
+
 install python3-pip
 install build-essential
 install libssl-dev

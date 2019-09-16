@@ -5,6 +5,9 @@ source ../lib/utils.sh
 source ../environment.sh
 
 
+banner "VIM"
+
+
 # Ensure vim is installed
 if not_installed vim; then
   install vim

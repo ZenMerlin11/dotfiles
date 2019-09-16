@@ -8,8 +8,11 @@ source ../environment.sh
 
 NVM_VERSION="v0.34.0"
 
+
+banner "NVM"
+
+
 if [[ ! -d "${_HOME}/.nvm" ]]; then
-  banner "NVM"
   cd "$_HOME"
   su -c "git clone https://github.com/nvm-sh/nvm.git .nvm" "$_USER"
   cd "${_HOME}/.nvm"
