@@ -18,7 +18,7 @@ manual_install() {
   echo "Attempting to install ${program} v${version}..."
 
   if is_installed "$program"; then
-    echo "Existing binary detected at $(which "$program"). Aborting install..."
+    echo "Existing binary detected at $(which "$program"). Skipping..."
   else
     banner "$program"
     if [[ "$program" == "terraform" ]]; then
