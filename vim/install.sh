@@ -6,8 +6,10 @@ source ../environment.sh
 
 
 # Ensure vim is installed
-install vim
-link_files "$(pwd)" "$_HOME"
+if not_installed vim; then
+  install vim
+  link_files "$(pwd)" "$_HOME"
+fi
 
 
 # Setup 
