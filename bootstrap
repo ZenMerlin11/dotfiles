@@ -5,8 +5,12 @@ source lib/utils.sh
 source environment.sh
 
 
+# Ensure working directory in dotfiles root
+cd "$DOTFILES_ROOT"
+
+
 # Update package index and apply available package upgrades
-#upgrade_packages
+upgrade_packages
 
 
 # Ensure figlet installed for printing banners
@@ -30,13 +34,14 @@ install curl
 install wget
 
 
-# Ensure Zsh installed first
-cd zsh && bash install.sh
+# Ensure these dependencies installed first
+cd "${DOTFILES_ROOT}/zsh" && bash _install.sh
+cd "${DOTFILES_ROOT}/python" && bash _install.sh
 cd "$DOTFILES_ROOT"
 
 
 # Install tools
-files="$(find -H . -maxdepth 2 -name 'install.sh' -not -path "./zsh/*")"
+files="$(find -H . -maxdepth 2 -name 'install.sh' -not -path "./.git/*")"
 for file in $files; do
   cd $(dirname "$file") && bash $(basename "$file")
   cd "$DOTFILES_ROOT"
