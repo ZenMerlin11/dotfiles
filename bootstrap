@@ -14,7 +14,7 @@ install figlet
 
 
 # Banner
-banner "Zen Box"
+banner "Zen Box" -f slant
 
 
 # Install misc utilities
