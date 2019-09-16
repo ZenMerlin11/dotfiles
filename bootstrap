@@ -41,3 +41,5 @@ for file in $files; do
   cd $(dirname "$file") && bash $(basename "$file")
   cd "$DOTFILES_ROOT"
 done
+
+banner "Setup Complete" -f slant
