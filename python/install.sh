@@ -7,7 +7,6 @@ source ../environment.sh
 
 
 install python3-pip
-install python3-pip
 install build-essential
 install libssl-dev
 install libffi-dev
