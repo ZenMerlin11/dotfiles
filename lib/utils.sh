@@ -4,28 +4,33 @@
 
 update_package_index() {
   echo "Updating apt package index..."
-  apt update -y
+  apt-get update -y
 }
 
 
 upgrade_packages() {
   update_package_index && \
   echo "Upgrading packages..." && \
-  apt upgrade -y
+  apt-get upgrade -y
 }
 
 
 install() {
   program_name="$1"
-  echo "Installing ${program_name}..."
-  apt install -y "${program_name}"
+
+  if not_installed "$program_name"; then
+    echo "Installing ${program_name}..."
+    apt-get install -y "${program_name}"
+  else
+    echo "${program_name} already installed. Skipping..."
+  fi
 }
 
 
 is_installed() {
   program_name="$1"
   
-  dpkg -l "$program_name" &> /dev/null
+  dpkg -s "$program_name" &> /dev/null
   in_pkg_man=$?
 
   which "$program_name" &> /dev/null
