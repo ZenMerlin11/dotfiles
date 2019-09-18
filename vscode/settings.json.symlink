@@ -1,0 +1,10 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ]
+}

@@ -14,3 +14,5 @@ if not_installed code; then
 else
   echo "VS Code already installed. Skipping..."
 fi
+
+link_files "$(pwd)" "${_HOME}/.config/Code/User"
