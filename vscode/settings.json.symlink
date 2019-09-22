@@ -6,5 +6,9 @@
             "before": ["j", "k"],
             "after": ["<Esc>"]
         }
-    ]
+    ],
+    "[css]": {
+        "editor.defaultFormatter": "aeschli.vscode-css-formatter"
+    },
+    "editor.rulers": [80, 100, 120]
 }
