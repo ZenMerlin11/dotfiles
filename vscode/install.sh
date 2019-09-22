@@ -15,4 +15,11 @@ else
   echo "VS Code already installed. Skipping..."
 fi
 
+# Install VS Code extensions
+vscode_dir="${DOTFILES_ROOT}/vscode"
+su -c \
+  "< extensions.txt xargs -L1 /snap/bin/code --install-extension" \
+  "$_USER"
+
+mkdir -p "${_HOME}/.config/Code/User"
 link_files "$(pwd)" "${_HOME}/.config/Code/User"

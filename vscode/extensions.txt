@@ -1,0 +1,10 @@
+aeschli.vscode-css-formatter
+donjayamanne.githistory
+dotiful.dotfiles-syntax-highlighting
+eamodio.gitlens
+mauve.terraform
+ms-azuretools.vscode-docker
+ms-python.python
+tomphilbin.gruvbox-themes
+vscode-icons-team.vscode-icons
+vscodevim.vim
