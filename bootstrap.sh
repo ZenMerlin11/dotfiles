@@ -32,6 +32,7 @@ install dialog
 install ranger
 install curl
 install wget
+install tree
 
 
 # Ensure these dependencies installed first
