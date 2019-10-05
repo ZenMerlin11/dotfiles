@@ -18,5 +18,8 @@ tags
 # Persistent undo
 [._]*.un~
 
+## Environment Variables/Secrets
+environment/*
+
 ## Misc
 backup
