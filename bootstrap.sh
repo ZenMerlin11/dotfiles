@@ -8,18 +8,27 @@ source environment.sh
 # Ensure working directory in dotfiles root
 cd "$DOTFILES_ROOT"
 
+# Set git config name and email
+if grep -Fq '<git_name>' ./git/.gitconfig.symlink; then
+  echo "Enter name for .gitconfig: "
+  read git_name
+  sed -i "s/<git_name>/${git_name}/g" ./git/.gitconfig.symlink
+fi
+
+if grep -Fq '<git_email>' ./git/.gitconfig.symlink; then
+  echo "Enter email for .gitconfig: "
+  read git_email
+  sed -i "s/<git_email>/${git_email}/g" ./git/.gitconfig.symlink
+fi
 
 # Update package index and apply available package upgrades
 upgrade_packages
 
-
 # Ensure figlet installed for printing banners
 install figlet
 
-
 # Banner
 banner "Zen Box" -f slant
-
 
 # Install misc utilities
 install zip
@@ -34,22 +43,10 @@ install curl
 install wget
 install tree
 
-
-# Set git config name and email
-echo "Setup .gitconfig"
-echo "Enter name: "
-read git_name
-echo "Enter email: "
-read git_email
-sed -i "s/<git_name>/${git_name}/g" git/.gitconfig.symlink
-sed -i "s/<git_email>/${git_email}/g" git/.gitconfig.symlink
-
-
 # Ensure these dependencies installed first
 cd "${DOTFILES_ROOT}/zsh" && bash _install.sh
 cd "${DOTFILES_ROOT}/python" && bash _install.sh
 cd "$DOTFILES_ROOT"
-
 
 # Install tools
 files="$(find -H . -maxdepth 2 -name 'install.sh' -not -path "./.git/*")"
