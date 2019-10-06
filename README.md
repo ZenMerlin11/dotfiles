@@ -1,15 +1,19 @@
 # Zenmerlin's Dotfiles
 ## Overview
 These are my dotfiles I use for setting up development vm's across my machines
-and are provided here for inspiration or your own use. Feel free to clone/fork
-and use as you please, but use at your own risk. If you do somehow manage to
-destroy your computer, do something quite illegal, instigate global
-thermonuclear war, etc, it's not my fault so don't sue and/or incarcerate me. ;)
+and are provided here for inspiration or your own use. This is setup and tested
+for use with Ubuntu 19.04. If using another OS/Distro you may have some more
+work to do. Start with looking at the package manager install functions in
+`lib/utils.sh`. Feel free to clone/fork and use as you please, but use at your
+own risk. If you do somehow manage to destroy your computer, do something quite
+illegal, instigate global thermonuclear war, etc, it's not my fault so don't sue
+and/or incarcerate me. ;)
 
 ## Tools Summary
 1. Zsh
 2. Python 3.7, Pip, Virtualenv
-3. i3 Config and Keyboard Setup (Using CapsLock for mod key to avoid fighting with Windows key)
+3. i3 Config and Keyboard Setup (Using CapsLock for mod key to avoid fighting
+   with Windows key)
 4. Vim 8, Vundle, Various Plugins/Color Schemes
 5. VS Code and Extensions
 6. Node Version Manager
@@ -23,18 +27,21 @@ thermonuclear war, etc, it's not my fault so don't sue and/or incarcerate me. ;)
 ## Getting Started
 1. Clone the repo to your home directory: `~./.dotfiles`
 2. Edit `~/.dotfiles/environment.sh` to change `_USER` to your user name.
-(Required for some tools to be setup with your user)
+   (Required for some tools to be setup with your user)
 3. From your dotfiles directory, run `sudo ./bootstrap.sh`.
-4. You will be prompted for your name and email to setup your .gitconfig if you 
-haven't set them already. (I recommend after initial setup you don't check this
-file in if you don't want your name and email in the repo for any reason)
+4. You will be prompted for your name and email to setup your .gitconfig if you
+   haven't set them already. (I recommend after initial setup you don't check
+   this file in if you don't want your name and email in the repo for any
+   reason)
 
 ## Organization
-Heavily inspired by [holman/dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/), my install and config files are separated
-into subdirectories based on which tool they belong to. Each subdirectory will
-contain (as applicable) an `install.sh` script, `...rc.zsh` rc file, and
-dotfiles to be linked elsewhere. Common utilities for working with these, such
-as package manager and symlink functions, are found in `./lib/utils.sh`.
+Heavily inspired by
+[holman/dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/),
+my install and config files are separated into subdirectories based on which
+tool they belong to. Each subdirectory will contain (as applicable) an
+`install.sh` script, `...rc.zsh` rc file, and dotfiles to be linked elsewhere.
+Common utilities for working with these, such as package manager and symlink
+functions, are found in `./lib/utils.sh`.
 
 ### 1. Install Scripts
 
