@@ -6,6 +6,7 @@ mauve.terraform
 ms-azuretools.vscode-docker
 ms-python.python
 samuelcolvin.jinjahtml
+stkb.rewrap
 tomphilbin.gruvbox-themes
 vscode-icons-team.vscode-icons
 vscodevim.vim
