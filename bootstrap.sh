@@ -35,6 +35,16 @@ install wget
 install tree
 
 
+# Set git config name and email
+echo "Setup .gitconfig"
+echo "Enter name: "
+read git_name
+echo "Enter email: "
+read git_email
+sed -i "s/<git_name>/${git_name}/g" git/.gitconfig.symlink
+sed -i "s/<git_email>/${git_email}/g" git/.gitconfig.symlink
+
+
 # Ensure these dependencies installed first
 cd "${DOTFILES_ROOT}/zsh" && bash _install.sh
 cd "${DOTFILES_ROOT}/python" && bash _install.sh
