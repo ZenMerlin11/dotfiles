@@ -5,9 +5,7 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 banner "VSCode"
-
 
 if not_installed code; then
   snap install code --classic

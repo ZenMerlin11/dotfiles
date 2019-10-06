@@ -5,10 +5,8 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 TERRAFORM_VERSION="0.12.7"
 TERRAGRUNT_VERSION="0.19.21"
-
 
 banner "Terraform"
 
@@ -62,7 +60,6 @@ install_terragrunt() {
     chmod 755 "${install_path}/terragrunt" && \
     echo "Terragrunt installed!"
 }
-
 
 manual_install terraform "$TERRAFORM_VERSION" '/usr/local/bin'
 manual_install terragrunt "$TERRAGRUNT_VERSION" '/usr/local/bin'

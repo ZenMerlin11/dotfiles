@@ -4,13 +4,10 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 banner "VIM"
-
 
 # Ensure vim is installed
 install vim
-
 
 # Setup 
 if [[ ! -d "${_HOME}/.vim/bundle/Vundle.vim" ]]; then

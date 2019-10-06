@@ -5,12 +5,9 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 GO_VERSION="1.13"
 
-
 banner "Go"
-
 
 if [[ -e "/usr/local/go/bin/go" ]]; then
   echo "Go already installed. Skipping..."

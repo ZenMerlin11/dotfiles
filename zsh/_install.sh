@@ -5,9 +5,7 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 banner "Zsh"
-
 
 # Ensure Zsh is installed
 if not_installed zsh; then
@@ -17,7 +15,6 @@ else
   echo "Zsh already installed. skipping..."
 fi
 
-
 # Ensure oh-my-zsh is installed
 if [[ ! -d "${_HOME}/.oh-my-zsh" ]]; then
   uri='https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh'
@@ -25,6 +22,5 @@ if [[ ! -d "${_HOME}/.oh-my-zsh" ]]; then
 else
   echo "oh-my-zsh already installed. skipping..."
 fi
-
 
 link_files "$(pwd)" "$_HOME"

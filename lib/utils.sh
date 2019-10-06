@@ -85,6 +85,7 @@ banner() {
   fi
 }
 
+
 link_file() {
   src="$1"
   dest="$2"
@@ -108,6 +109,7 @@ link_file() {
   echo "Linking file: ${dest}"
   ln -s "$src" "$dest"
 }
+
 
 link_files() {
   src_dir="$1"

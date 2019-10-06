@@ -5,9 +5,7 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 banner "Docker"
-
 
 if not_installed docker; then
   # Ensure dependency installed

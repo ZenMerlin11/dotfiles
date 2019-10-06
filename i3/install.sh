@@ -5,9 +5,7 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-
 banner "i3"
-
 
 install i3
 install feh
