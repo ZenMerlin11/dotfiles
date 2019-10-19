@@ -42,6 +42,7 @@ install ranger
 install curl
 install wget
 install tree
+install shellcheck
 
 # Ensure these dependencies installed first
 cd "${DOTFILES_ROOT}/zsh" && bash _install.sh
