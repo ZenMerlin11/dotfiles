@@ -43,6 +43,7 @@ install curl
 install wget
 install tree
 install shellcheck
+install tmux
 
 # Ensure these dependencies installed first
 cd "${DOTFILES_ROOT}/zsh" && bash _install.sh
