@@ -16,5 +16,9 @@
         120
     ],
     "vsicons.dontShowNewVersionMessage": true,
-    "window.zoomLevel": -1
+    "window.zoomLevel": -1,
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.useTabStops": true
+    }
 }

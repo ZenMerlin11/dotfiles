@@ -18,6 +18,7 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
