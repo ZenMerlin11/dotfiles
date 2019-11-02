@@ -44,6 +44,7 @@ install wget
 install tree
 install shellcheck
 install tmux
+install htop
 
 # Ensure these dependencies installed first
 cd "${DOTFILES_ROOT}/zsh" && bash _install.sh
