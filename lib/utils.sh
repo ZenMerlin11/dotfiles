@@ -33,7 +33,7 @@ is_installed() {
   dpkg -s "$program_name" &> /dev/null
   in_pkg_man=$?
 
-  which "$program_name" &> /dev/null
+  command -v "$program_name" &> /dev/null
   in_path=$?
 
   if [[ in_pkg_man -eq 0 ]] || [[ in_path -eq 0 ]]; then
@@ -47,6 +47,7 @@ is_installed() {
 not_installed() {
   program_name="$1"
 
+  # Doesn't work if quoted
   return $(! is_installed "$program_name")
 }
 
@@ -55,7 +56,7 @@ append_unique_to_file() {
   line="$1"
   file="$2"
 
-  lines_found_in_file=$(cat "$file" | grep "$line" | wc -l)
+  lines_found_in_file=$(grep -c "$line" "$file")
   if [[ lines_found_in_file -eq 0 ]]; then
     echo "$line" >> "$file"
   else
@@ -67,7 +68,7 @@ append_unique_to_file() {
 append_blank_line_to_file() {
   file="$1"
   
-  blank_lines_at_eof=$(tail -n 1 "$file" | grep -e '^$' | wc -l)
+  blank_lines_at_eof=$(tail -n 1 "$file" | grep -c '^$')
   if [[ blank_lines_at_eof -eq 0 ]]; then
     echo "" >> "$file"
   fi
@@ -79,6 +80,8 @@ banner() {
   shift
 
   if is_installed figlet; then
+    # Not quoting $@ is intentional. We want to pass remaining args to figlet
+    # with splitting.
     figlet "$msg" $@
   else
     echo "$msg"
@@ -94,11 +97,11 @@ link_file() {
   
   if [[ -h "$dest" ]]; then
     echo "Removing existing symlink: ${dest}"
-    rm ${dest}
+    rm "${dest}"
     
   elif [[ -f "$dest" ]]; then
     echo "Backing up existing file: ${dest}"
-    mkdir -p ${BACKUP_DIR}
+    mkdir -p "${BACKUP_DIR}"
     mv "$dest" "${BACKUP_DIR}/$(basename "$dest")_${dateStr}"
 
   elif [[ -d "$dest" ]]; then
@@ -117,10 +120,25 @@ link_files() {
 
   files=$(find -H "$src_dir" -maxdepth 1 -name '*.symlink')
 
-  for file_src in "$files"; do
+  for file_src in $files; do
     file=$(basename "$file_src")
     src="${src_dir}/${file}"
     dest="${dest_dir}/${file%.*}"
     link_file "$src" "$dest"
   done
+}
+
+
+ensure_cd() {
+  path=$1
+  cd "$path" || err_dir_not_found "$path"
+}
+
+
+# Error handling
+err_dir_not_found() {
+  dir=$1
+
+  echo "Error: ${dir} not found. Exiting."
+  exit 1
 }

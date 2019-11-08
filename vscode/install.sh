@@ -14,7 +14,6 @@ else
 fi
 
 # Install VS Code extensions
-vscode_dir="${DOTFILES_ROOT}/vscode"
 su -c \
   "< extensions.txt xargs -L1 /snap/bin/code --install-extension" \
   "$_USER"

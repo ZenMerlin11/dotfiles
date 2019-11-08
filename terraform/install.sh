@@ -19,7 +19,7 @@ manual_install() {
   echo "Attempting to install ${program} v${version}..."
 
   if is_installed "$program"; then
-    echo "Existing binary detected at $(which "$program"). Skipping..."
+    echo "Existing binary detected at $(command -v "$program"). Skipping..."
   else
     if [[ "$program" == "terraform" ]]; then
       install_terraform "$version" "$install_path"
