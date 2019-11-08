@@ -1,6 +1,6 @@
 [user]
-	name = Jason Boyll
-	email = jason.boyll@gmail.com
+	name = <git_name>
+	email = <git_email>
 [core]
 	editor = vim
 [push]
