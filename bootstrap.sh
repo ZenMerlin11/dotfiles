@@ -45,6 +45,7 @@ install tree
 install shellcheck
 install tmux
 install htop
+install neofetch
 
 # Ensure these dependencies installed first
 ensure_cd "${DOTFILES_ROOT}/zsh"
