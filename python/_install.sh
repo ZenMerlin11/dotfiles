@@ -12,6 +12,7 @@ install build-essential
 install libssl-dev
 install libffi-dev
 install python3-dev
+install python3-venv
 
 if [[ ! -e "${_HOME}/.local/bin/virtualenv" ]]; then
   echo "Installing virtualenv..."
