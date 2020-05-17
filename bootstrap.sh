@@ -46,6 +46,7 @@ install shellcheck
 install tmux
 install htop
 install neofetch
+install caffeine
 
 # Ensure these dependencies installed first
 ensure_cd "${DOTFILES_ROOT}/zsh"
