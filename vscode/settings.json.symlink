@@ -20,5 +20,6 @@
     "[go]": {
         "editor.tabSize": 4,
         "editor.useTabStops": true
-    }
+    },
+    "shellcheck.disableVersionCheck": true
 }
