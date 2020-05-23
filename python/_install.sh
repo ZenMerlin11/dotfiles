@@ -13,10 +13,3 @@ install libssl-dev
 install libffi-dev
 install python3-dev
 install python3-venv
-
-if [[ ! -e "${_HOME}/.local/bin/virtualenv" ]]; then
-  echo "Installing virtualenv..."
-  su -c "pip3 install virtualenv" "$_USER"
-else
-  echo "virtualenv already installed. Skipping..."
-fi
