@@ -31,22 +31,8 @@ install figlet
 banner "Zen Box" -f slant
 
 # Install misc utilities
-install zip
-install nmap
-install cowsay
-install lolcat
-install jq
-install jo
-install dialog
-install ranger
-install curl
-install wget
-install tree
-install shellcheck
-install tmux
-install htop
-install neofetch
-install caffeine
+ensure_cd "${DOTFILES_ROOT}/misc"
+bash _install.sh
 
 # Ensure these dependencies installed first
 ensure_cd "${DOTFILES_ROOT}/zsh"
