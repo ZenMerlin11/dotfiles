@@ -18,7 +18,7 @@
     "vsicons.dontShowNewVersionMessage": true,
     "window.zoomLevel": -1,
     "[go]": {
-        "editor.tabSize": 4,
+        "editor.tabSize": 8,
         "editor.useTabStops": true
     },
     "shellcheck.disableVersionCheck": true

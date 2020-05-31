@@ -65,3 +65,8 @@ nnoremap <leader>a ggvG$
 " ==============================================================================
 "" Tabs
 autocmd FileType c setlocal shiftwidth=8 softtabstop=8 expandtab
+
+" Go Source Settings
+" ==============================================================================
+"" Tabs
+autocmd FileType go setlocal shiftwidth=8 softtabstop=8 expandtab
