@@ -5,7 +5,7 @@
 source ../lib/utils.sh
 source ../environment.sh
 
-GO_VERSION="1.13"
+GO_VERSION="1.14.3"
 
 banner "Go"
 
