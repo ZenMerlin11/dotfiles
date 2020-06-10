@@ -13,16 +13,13 @@ packages=(
   lolcat
   jq
   jo
-  dialog
   ranger
   curl
   wget
   tree
   shellcheck
-  tmux
   htop
   neofetch
-  caffeine
 )
 
 for package in "${packages[@]}"; do

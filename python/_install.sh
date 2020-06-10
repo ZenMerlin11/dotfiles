@@ -7,9 +7,15 @@ source ../environment.sh
 
 banner "Python"
 
-install python3-pip
-install build-essential
-install libssl-dev
-install libffi-dev
-install python3-dev
-install python3-venv
+packages=(
+  python3-pip
+  build-essential
+  libssl-dev
+  libffi-dev
+  python3-dev
+  python3-venv
+)
+
+for package in "${packages[@]}"; do
+  install "$package"
+done

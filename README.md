@@ -12,17 +12,9 @@ and/or incarcerate me. ;)
 ## Tools Summary
 1. Zsh
 2. Python 3.7, Pip, Virtualenv
-3. i3 Config and Keyboard Setup (Using CapsLock for mod key to avoid fighting
-   with Windows key)
-4. Vim 8, Vundle, Various Plugins/Color Schemes
-5. VS Code and Extensions
-6. Node Version Manager
-7. Golang
-8. Git
-9. Docker
-10. AWS-CLI
-11. Terraform and Terragrunt
-12. Chromium
+3. Vim 8, Vundle, Various Plugins/Color Schemes
+4. Git
+5. Docker
 
 ## Getting Started
 1. Clone the repo to your home directory: `~./.dotfiles`
