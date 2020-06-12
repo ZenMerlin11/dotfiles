@@ -12,9 +12,7 @@ install vim
 # Setup 
 if [[ ! -d "${_HOME}/.vim/bundle/Vundle.vim" ]]; then
   if is_installed zsh; then 
-    su -c "zsh setup_vundle.zsh" "$_USER" && \
-      echo "Installing vim plugins..." && \
-      vim -E -s -c "source ~/.vimrc" -c "PluginInstall" -c "qa"
+    su -c "zsh setup_vundle.zsh" "$_USER"
   else
     echo "Error: zsh is not installed"
     exit 1
