@@ -23,6 +23,7 @@ packages=(
   htop
   neofetch
   caffeine
+  valgrind
 )
 
 for package in "${packages[@]}"; do
