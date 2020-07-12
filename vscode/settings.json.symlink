@@ -21,5 +21,8 @@
         "editor.tabSize": 8,
         "editor.useTabStops": true
     },
-    "shellcheck.disableVersionCheck": true
+    "shellcheck.disableVersionCheck": true,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "editor.multiCursorModifier": "alt"
 }
