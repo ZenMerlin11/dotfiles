@@ -18,7 +18,7 @@ fi
 # Ensure oh-my-zsh is installed
 if [[ ! -d "${_HOME}/.oh-my-zsh" ]]; then
   uri='https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh'
-  su -c sh -c "wget -qO- ${uri}" "$_USER"
+  su -c sh -c "$(wget -qO- ${uri})" "$_USER"
 else
   echo "oh-my-zsh already installed. skipping..."
 fi
