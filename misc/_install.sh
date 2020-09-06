@@ -24,6 +24,7 @@ packages=(
   neofetch
   caffeine
   valgrind
+  hugo
 )
 
 for package in "${packages[@]}"; do
