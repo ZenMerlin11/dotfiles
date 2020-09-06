@@ -64,10 +64,16 @@ nnoremap <leader>a ggvG$
 " C Source Settings
 " ==============================================================================
 "" Tabs
-autocmd FileType c setlocal shiftwidth=8 softtabstop=8 expandtab
+augroup c
+  autocmd!
+  autocmd FileType c setlocal shiftwidth=8 softtabstop=8 expandtab
+augroup END
 
 " Go Source Settings
 " ==============================================================================
 "" Tabs
-autocmd FileType go setlocal shiftwidth=8 softtabstop=8 expandtab
-autocmd BufNewFile,BufRead *.gohtml set syntax=html
+augroup go
+  autocmd!
+  autocmd FileType go setlocal shiftwidth=8 softtabstop=8 expandtab
+  autocmd BufNewFile,BufRead *.gohtml set syntax=html
+augroup END
