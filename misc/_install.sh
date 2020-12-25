@@ -25,6 +25,9 @@ packages=(
   caffeine
   valgrind
   hugo
+  terminator
+  proxychains
+  tor
 )
 
 for package in "${packages[@]}"; do
