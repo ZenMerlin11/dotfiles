@@ -30,6 +30,7 @@ packages=(
   tor
   net-tools
   tshark
+  xclip
 )
 
 for package in "${packages[@]}"; do
