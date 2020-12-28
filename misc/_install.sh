@@ -29,6 +29,7 @@ packages=(
   proxychains
   tor
   net-tools
+  tshark
 )
 
 for package in "${packages[@]}"; do
