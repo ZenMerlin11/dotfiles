@@ -28,6 +28,7 @@ packages=(
   terminator
   proxychains
   tor
+  net-tools
 )
 
 for package in "${packages[@]}"; do
