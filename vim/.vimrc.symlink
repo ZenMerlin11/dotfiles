@@ -26,6 +26,7 @@ set number
 let g:gruvbox_contrast_dark = "medium"
 set background=dark
 colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 "" Tabs
 set expandtab
