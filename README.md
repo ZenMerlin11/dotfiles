@@ -1,4 +1,10 @@
-# Zenmerlin's Dotfiles
+# Zenmerlin's Dotfiles (DEPRECATED)
+
+## Deprecation
+I no longer use this to manage my dotfiles and have moved to an [ansible based
+solution](https://github.com/zenmerlin/ansible-workstation-configs) to manage
+my workstation provisioning. This repo left here for reference.
+
 ## Overview
 These are my dotfiles I use for setting up development vm's across my machines
 and are provided here for inspiration or your own use. This is setup and tested
